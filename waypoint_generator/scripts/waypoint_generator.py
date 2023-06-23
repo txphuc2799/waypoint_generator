@@ -106,7 +106,7 @@ class WaypointsGenerator(object):
 
 if __name__ == "__main__":
 
-    file_name = rospy.get_param("~file_name", "/home/phuc/catkin_ws/src/amr_V2/amr_driver/config/amr_waypoints.yaml") # Your directory 
+    file_name = rospy.get_param("~file_name", "/waypoint_generator/cfg/waypoints.yaml") # Your directory 
     sub_amcl_pose = WaypointsGenerator(file_name)
     sub_amcl_pose.save_waypoints()
     rospy.loginfo("Write done!")
