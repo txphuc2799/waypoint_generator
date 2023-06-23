@@ -126,7 +126,7 @@ class WaypointsGenerator(object):
 
 if __name__ == "__main__":
 
-    file_name = rospy.get_param("~file_name", "/home/phuc/catkin_ws/src/turtlebot3/turtlebot3_controller/cfg/turtlebot3_waypoints.yaml")
+    file_name = rospy.get_param("~file_name", "/waypoint_generator/cfg/waypoints.yaml")
     sub_amcl_pose = WaypointsGenerator(file_name)
     sub_amcl_pose.save_waypoints()
     print("Write done!")
