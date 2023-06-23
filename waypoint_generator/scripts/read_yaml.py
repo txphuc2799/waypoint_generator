@@ -7,7 +7,7 @@ class ReadYaml():
 
     def __init__(self):
         
-        self.b = self.read_position('b',0)
+        self.b = self.read_position('v',0)
         print("a = ", self.b)
 
 
@@ -21,16 +21,9 @@ class ReadYaml():
             data = yaml.safe_load(file)
 
             if order:
-                position = data[f'{postion_name}']['pose']['position']
-                orientation = data[f'{postion_name}']['pose']['orientation']
-
-                # position = list(position.values())
-                # orientation = list(orientation.values())
-                # pos.append(position)
-                # pos.append(orientation)
+                position = data[f'{postion_name}']['pose'][0]
             else:
-                position = data[f'{postion_name}']['pose']['position'][0]
-                position = list(position.values())
+                position = data[f'{postion_name}']['pose']
             return position
 
 
