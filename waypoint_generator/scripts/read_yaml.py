@@ -17,7 +17,7 @@ class ReadYaml():
         order = 0 -> More positions
         """
         pos = []
-        with open("/waypoint_generator/cfg/turtlebot3_waypoints.yaml", 'r') as file:
+        with open("/waypoint_generator/cfg/waypoints.yaml", 'r') as file:
             data = yaml.safe_load(file)
 
             if order:
